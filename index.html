@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Игра</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="login-screen">
+  <img id="map" src="./img/2307-w015-n003-1301B-p15-1301.jpg" alt="Map">
+  <input type="text" id="player-name" placeholder="Введите ваше имя">
+  <button id="start-button">Начать игру</button>
+</div>
+
+<div id="game-screen" style="display: none;">
+  <div id="game-container">
+    <img id="player" src="./img/icons8-теодор-петерсон-48.png" alt="Player">
+    <img id="map" src="./img/2307-w015-n003-1301B-p15-1301.jpg" alt="Map">
+    <div id="trap"> 
+        <img id="trap" src="./img/free-icon-trap-4293754.png" alt="trap">
+    </div> 
+  </div>
+</div>
+
+
+<div id="info-panel">
+  <p>Имя: <span id="player-name-info"></span></p>
+  <p>Текущее время: <span id="current-time"></span></p>
+  <p>Время игры: <span id="elapsed-time">00:00</span></p>
+  <p>Жизни: <span id="life-counter">5</span></p>
+</div>
+
+<div id="pause-overlay" class="overlay">
+  <p>ИГРА ПРИОСТАНОВЛЕНА</p>
+</div>
+
+<div id="game-over-screen" style="display: none;">
+  <div class="game-over-content">
+    <h2>ПОТРАЧЕНО</h2>
+    <div class="result-stats">
+      <p>Время игры: <span id="result-time">00:00</span></p>
+      <p>Количество монстров: <span id="result-monster">0</span></p>
+      <p>Количество ловушек: <span id="result-trap">0</span></p>
+      <p>Оставшиеся жизни: <span id="result-life">0</span></p>
+    </div>
+    <button id="restart-button">Играть заново</button>
+  </div>
+</div>
+
+<script src="./js/main.js"></script>
+</body>
+</html>
